@@ -30,5 +30,35 @@ class PagesController extends Controller {
 	{
 		return view('pages.home');
 	}
+	
+	public function details()
+	{
+		return view('pages.details');
+	}
+	
+	public function news()
+	{
+		return view('pages.news');
+	}
+	
+	public function offers()
+	{
+		return view('pages.offers');
+	}
+	
+	public function prices()
+	{
+		return view('pages.prices');
+	}
+	
+	public function recruitment()
+	{
+		return view('pages.recruitment');
+	}
+	
+	public function team()
+	{
+		return view('pages.team');
+	}
 
 }
