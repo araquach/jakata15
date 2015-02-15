@@ -12,6 +12,12 @@
 */
 
 Route::get('/', 'PagesController@index');
+Route::get('/contact', 'PagesController@details');
+Route::get('/news', 'PagesController@news');
+Route::get('/recruitment', 'PagesController@recruitment');
+Route::get('/offers', 'PagesController@offers');
+Route::get('/prices', 'PagesController@prices');
+Route::get('/team', 'PagesController@team');
 
 
 
