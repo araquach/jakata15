@@ -25,8 +25,6 @@ Route::get('contact',
 Route::post('contact', 
   ['as' => 'contact_store', 'uses' => 'ContactController@store']);
 
-
-
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
