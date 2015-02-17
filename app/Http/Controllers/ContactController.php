@@ -34,7 +34,19 @@ class ContactController extends Controller {
 	
 	public function store(ContactFormRequest $request)
 	{
-		return \Redirect::route('contact')
-		      ->with('message', 'Thanks for contacting us!');
+		\Mail::send('contact.contact',
+		        array(
+		            'name' => $request->get('first_name'),
+		            'email' => $request->get('email'),
+		            'user_message' => $request->get('body')
+		        ), function($message)
+		    {
+		        $message->from('adam@jakata.com');
+		        $message->to('adam@jakata.com', 'Admin')->subject('TODOParrot Feedback');
+		    });
+		
+		  return \Redirect::route('contact')->with('message', 'Thanks for contacting us!');
 	}
+	
+	
 }
