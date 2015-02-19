@@ -1,17 +1,12 @@
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'stylist-form',
-	'enableClientValidation'=>true,
-	'clientOptions'=>array(
-		'validateOnSubmit'=>true,
-	),
-	'enableAjaxValidation'=>false,
-)); ?>
-
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<ul>
+	    @foreach($errors->all() as $error)
+	        <li>{{{ $error }}}</li>
+	    @endforeach
+	</ul>
 
 <div class="accordion">
 	
@@ -19,97 +14,95 @@
 	<div class="elements">
 
 	<div class="row">
-		<?php echo $form->hiddenField($model,'date'); ?>
+		hidden field date
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'first_name'); ?>
-		<?php echo $form->textField($model,'first_name',array('size'=>60,'maxlength'=>256)); ?>
-		<?php echo $form->error($model,'first_name'); ?>
+		{!! Form::label('first_name', 'First Name') !!}
+		{!! Form::text('first_name') !!}
+		{!! $errors->first('first_name') !!}
 	</div>
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'second_name'); ?>
-		<?php echo $form->textField($model,'second_name',array('size'=>60,'maxlength'=>256)); ?>
-		<?php echo $form->error($model,'second_name'); ?>
+		{!! Form::label('second_name', 'Second Name') !!}
+		{!! Form::text('second_name') !!}
+		{!! $errors->first('second_name') !!}
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'address1'); ?>
-		<?php echo $form->textField($model,'address1',array('size'=>60,'maxlength'=>256)); ?>
-		<?php echo $form->error($model,'address1'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'address2'); ?>
-		<?php echo $form->textField($model,'address2',array('size'=>60,'maxlength'=>256)); ?>
-		<?php echo $form->error($model,'address2'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'address3'); ?>
-		<?php echo $form->textField($model,'address3',array('size'=>60,'maxlength'=>256)); ?>
-		<?php echo $form->error($model,'address3'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'postcode'); ?>
-		<?php echo $form->textField($model,'postcode',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'postcode'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->emailField($model,'email',array('size'=>60,'maxlength'=>256)); ?>
-		<?php echo $form->error($model,'email'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'phone'); ?>
-		<?php echo $form->textField($model,'phone',array('size'=>30,'maxlength'=>30)); ?>
-		<?php echo $form->error($model,'phone'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'mobile'); ?>
-		<?php echo $form->textField($model,'mobile',array('size'=>30,'maxlength'=>30)); ?>
-		<?php echo $form->error($model,'mobile'); ?>
+		{!! Form::label('address1', 'Address 1') !!}
+		{!! Form::text('address1') !!}
+		{!! $errors->first('address1') !!}
 	</div>
 	
+	<div class="row">
+		{!! Form::label('address2', 'Address 2') !!}
+		{!! Form::text('address 2') !!}
+		{!! $errors->first('address2') !!}
+	</div>
+	
+	<div class="row">
+		{!! Form::label('address3', 'Address 3') !!}
+		{!! Form::text('address3') !!}
+		{!! $errors->first('address3') !!}
+	</div>
+	
+	<div class="row">
+		{!! Form::label('postcode', 'Postcode') !!}
+		{!! Form::text('postcode') !!}
+		{!! $errors->first('postcode') !!}
+	</div>
+	
+	<div class="row">
+		{!! Form::label('email', 'Email') !!}
+		{!! Form::text('email') !!}
+		{!! $errors->first('email') !!}
+	</div>
+	
+	<div class="row">
+		{!! Form::label('phone', 'Phone') !!}
+		{!! Form::text('phone') !!}
+		{!! $errors->first('phone') !!}
+	</div>
+	
+	<div class="row">
+		{!! Form::label('mobile', 'Mobile') !!}
+		{!! Form::text('mobile') !!}
+		{!! $errors->first('mobile') !!}	
 	</div> <!--end elements (basic)-->
 	
 	<h2 class="reveal">2. Other Info</h2>
 	<div class="elements">
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'current_emp'); ?>
-		<?php echo $form->dropDownList($model,'current_emp', $model->getEmploymentOptions()); ?>
-		<?php echo $form->error($model,'current_emp'); ?>
+		{!! Form::label('current_emp', 'Current Employment') !!}
+		{!! Form::select('current_emp') !!}
+		{!! $errors->first('current_emp') !!}
 	</div>
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'current_emp_des'); ?>
-		<?php echo $form->textField($model,'current_emp_des',array('size'=>30,'maxlength'=>30)); ?>
-		<?php echo $form->error($model,'current_emp_des'); ?>
+		{!! Form::label('current_emp_des', 'Current Employment Description') !!}
+		{!! Form::select('current_emp_des') !!}
+		{!! $errors->first('current_emp_des') !!}
 	</div>
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'school_qual'); ?>
-		<?php echo $form->dropDownList($model,'school_qual', $model->getQualSchoolOptions()); ?>
-		<?php echo $form->error($model,'school_qual'); ?>
+		{!! Form::label('school_qual', 'School Qualifications') !!}
+		{!! Form::select('school_qual') !!}
+		{!! $errors->first('school_qual') !!}
 	</div>
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'qual_non_hair'); ?>
-		<?php echo $form->textArea($model,'qual_non_hair',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'qual_non_hair'); ?>
+		{!! Form::label('qual_non_hair', 'Any other Qualifications') !!}
+		{!! Form::text('qual_non_hair') !!}
+		{!! $errors->first('qual_non_hair') !!}
 	</div>
 	
 	<div class="row">
-			<?php echo $form->labelEx($model,'experience'); ?>
-			<?php echo $form->dropDownList($model,'experience', $model->getExperianceOptions()); ?>
-			<?php echo $form->error($model,'experience'); ?>
-		</div>
+		{!! Form::label('experience', 'Experience') !!}
+		{!! Form::select('experience') !!}
+		{!! $errors->first('experience') !!}
+	</div>	
 	
 		<div class="row">
 			<?php echo $form->labelEx($model,'current_position'); ?>
