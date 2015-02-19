@@ -82,40 +82,40 @@
 	
 	</div> <!--end elements (basic info)-->
 	
-	<!--<h2 class="reveal">2. Experience</h2>
+	<h2 class="reveal">2. Experience</h2>
 	<div class="elements">
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'current_position'); ?>
-		<?php echo $form->dropDownList($model,'current_position', $model->getPositionOptions()); ?>
-		{{ $errors->first('') }},'current_position'); ?>
+		{!! Form::label('current_position', 'Current Position') !!}
+		{!! Form::select('current_position') !!}
+		{!! $errors->first('current_position') !!}
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'in_salon'); ?>
-		<?php echo $form->dropDownList($model,'in_salon', $model->getInSalonOptions()); ?>
-		{{ $errors->first('') }},'in_salon'); ?>
+		{!! Form::label('in_salon', 'In Salon') !!}
+		{!! Form::select('in_salon') !!}
+		{!! $errors->first('in_salon') !!}
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'salon_name'); ?>
-		<?php echo $form->textField($model,'salon_name',array('size'=>60,'maxlength'=>256)); ?>
-		{{ $errors->first('') }},'salon_name'); ?>
+		{!! Form::label('salon_name', 'Salon Name') !!}
+		{!! Form::text('in_salon') !!}
+		{!! $errors->first('salon_name') !!}
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'qualification_school'); ?>
-		<?php echo $form->dropDownList($model,'qualification_school', $model->getQualSchoolOptions()); ?>
-		{{ $errors->first('') }},'qualification_school'); ?>
+		{!! Form::label('qualification_school', 'School Qualifications') !!}
+		{!! Form::select('qualification_school') !!}
+		{!! $errors->first('qualification_school') !!}
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'qualification_hair'); ?>
-		<?php echo $form->dropDownList($model,'qualification_hair', $model->getQualHairOptions()); ?>
-		{{ $errors->first('') }},'qualification_hair'); ?>
+		{!! Form::label('qualification_hair', 'Hairdressing Qualifications') !!}
+		{!! Form::select('qualification_hair') !!}
+		{!! $errors->first('qualification_hair') !!}
 	</div>
 	
-	</div> <!- -end elements (experience)- -*>
+	</div> <!--end elements (experience)-->
 	
 	<h2 class="reveal">3. Hairdressing Skills</h2>
 	<div class="elements">
@@ -123,79 +123,79 @@
 	<p class="application">Please rate your main interests from 1 (least) to 5 (most) for the following:</p>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'cutting'); ?>
-		<?php echo $form->dropDownList($model,'cutting', $model->getListOptions()); ?>
-		{{ $errors->first('') }},'cutting'); ?>
+		{!! Form::label('cutting', 'Cutting') !!}
+		{!! Form::select('') !!}
+		{!! $errors->first('cutting') !!}
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'styling'); ?>
-		<?php echo $form->dropDownList($model,'styling', $model->getListOptions()); ?>
-		{{ $errors->first('') }},'styling'); ?>
+		{!! Form::label('styling', 'Styling') !!}
+		{!! Form::select('styling') !!}
+		{!! $errors->first('styling') !!}
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'colouring'); ?>
-		<?php echo $form->dropDownList($model,'colouring', $model->getListOptions()); ?>
-		{{ $errors->first('') }},'colouring'); ?>
+		{!! Form::label('colouring', 'Colouring') !!}
+		{!! Form::select('colouring') !!}
+		{!! $errors->first('colouring') !!}
 	</div>
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'men'); ?>
-		<?php echo $form->dropDownList($model,'men', $model->getListOptions()); ?>
-		{{ $errors->first('') }},'men'); ?>
+		{!! Form::label('men', 'Men') !!}
+		{!! Form::select('men') !!}
+		{!! $errors->first('men') !!}
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'extensions'); ?>
-		<?php echo $form->dropDownList($model,'extensions', $model->getListOptions()); ?>
-		{{ $errors->first('') }},'extensions'); ?>
+		{!! Form::label('extensions', 'Extensions') !!}
+		{!! Form::select('extensions') !!}
+		{!! $errors->first('extensions') !!}
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'chem_straightening'); ?>
-		<?php echo $form->dropDownList($model,'chem_straightening', $model->getListOptions()); ?>
-		{{ $errors->first('') }},'chem_straightening'); ?>
+		{!! Form::label('chem_straightening', 'Chemical Straightening') !!}
+		{!! Form::select('chem_straightening') !!}
+		{!! $errors->first('chem_straightening') !!}
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'brazil_blow'); ?>
-		<?php echo $form->dropDownList($model,'brazil_blow', $model->getListOptions()); ?>
-		{{ $errors->first('') }},'brazil_blow'); ?>
+		{!! Form::label('brazil_blow', 'Brazilian Blowdry') !!}
+		{!! Form::select('brazil_blow') !!}
+		{!! $errors->first('brazil_blow') !!}
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'hair_up'); ?>
-		<?php echo $form->dropDownList($model,'hair_up', $model->getListOptions()); ?>
-		{{ $errors->first('') }},'hair_up'); ?>
+		{!! Form::label('hair_up', 'Hair Up') !!}
+		{!! Form::select('hair_up') !!}
+		{!! $errors->first('hair_up') !!}
 	</div>
-	</div> <!- -end elements (hairdressing skills)- -*>
+	</div> <!--end elements (hairdressing skills)-->
 	
 	<h2 class="reveal">4. About you</h2>
 	<div class="elements">
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'about'); ?>
-		<?php echo $form->textArea($model,'about',array('rows'=>6, 'cols'=>50)); ?>
-		{{ $errors->first('') }},'about'); ?>
+		{!! Form::label('about', 'About Yourself') !!}
+		{!! Form::textarea('about') !!}
+		{!! $errors->first('about') !!}
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'why_hairdressing'); ?>
-		<?php echo $form->textArea($model,'why_hairdressing',array('rows'=>6, 'cols'=>50)); ?>
-		{{ $errors->first('') }},'why_hairdressing'); ?>
+		{!! Form::label('why_hairdressing', 'Why hairdressing?') !!}
+		{!! Form::textarea('') !!}
+		{!! $errors->first('why_hairdressing') !!}
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'why_jakata'); ?>
-		<?php echo $form->textArea($model,'why_jakata',array('rows'=>6, 'cols'=>50)); ?>
-		{{ $errors->first('') }},'why_jakata'); ?>
+		{!! Form::label('why_jakata', 'Why Jakata?') !!}
+		{!! Form::textarea('why_jakata') !!}
+		{!! $errors->first('why_jakata') !!}
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Send your application' : 'Save'); ?>
+	{!! Form::submit('Send') !!}
 	</div>
-	</div> <!- -end elements (about you)-->
+	</div> <!--end elements (about you)-->
 </div><!-- end accordion-->
 
 {!! Form::close() !!}
