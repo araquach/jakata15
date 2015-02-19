@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class ApprenticeController extends Controller {
 
+	public function __construct()
+	{
+		$this->middleware('guest');
+	}
+
+	
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -14,7 +20,7 @@ class ApprenticeController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		return 'Apprentice';
 	}
 
 	/**
@@ -24,7 +30,7 @@ class ApprenticeController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('recruit.apprentice.create');
 	}
 
 	/**

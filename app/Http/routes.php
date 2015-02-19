@@ -24,6 +24,9 @@ Route::get('contact',
   ['as' => 'contact', 'uses' => 'ContactController@create']);
 Route::post('contact', 
   ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+  
+Route::resource('apprentice', 'ApprenticeController');
+Route::resource('stylist', 'StylistController');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

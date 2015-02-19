@@ -31,7 +31,7 @@ class ApprenticeFormRequest extends Request {
 			'address2' => 'required',
 			'address3' => 'required',
 			'postcode' => 'required',
-			'email' => 'required',
+			'email' => 'required|email',
 			'phone' => 'required',
 			'mobile' => 'required',
 			'current_position' => 'required',

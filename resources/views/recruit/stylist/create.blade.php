@@ -1,3 +1,7 @@
+@extends('layouts.main')
+
+@section('content')
+
 <script type="text/javascript">
 window.addEvent('domready', function(){
 	  
@@ -9,25 +13,21 @@ window.addEvent('domready', function(){
 });
 </script>
 
-<?php $this->pageTitle=Yii::app()->name. 'Home'; ?>
-
 <div id="application">
-<?php if(Yii::app()->user->hasFlash('stylist')): ?>
-
-<div class="applicationSuccess">
-	<?php echo Yii::app()->user->getFlash('stylist'); ?>
+@if(Session::has('message'))
+	<div class="applicationSuccess">
+	{{{ Session::get('message') }}}
 </div>
-
-<?php else: ?>
+@endif
 
 <div id="application-form">
 <h1>Join the team: Stylist Position</h1>
-<p><?php echo CHtml::link("Click here to apply for an apprentice position", array('apprentice/create')); ?></p>
+<p>LINK TO APPRENTICE</p>
 <p>Please complete ALL sections of the form before submitting your application.</p>
 <p>We will contact you as soon as a position becomes available.</p>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
-</div> <!--application-form-->
-</div> <!--application-->
+<p>form here</p>
+</div> 
+</div> 
 
-<?php endif; ?>
+@stop
