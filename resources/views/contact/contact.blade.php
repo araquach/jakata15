@@ -44,6 +44,11 @@
 	</div>
 	
 	<div class="row">
+	{!! Form::label('email_confirm', 'Confirm Email Address') !!}
+	{!! Form::email('email_confirm') !!}
+	</div>
+	
+	<div class="row">
 	{!! Form::label('mobile', 'Contact Number') !!}
 	{!! Form::text('mobile') !!}
 	</div>
@@ -53,7 +58,9 @@
 	{!! Form::textarea('body') !!}
 	</div>
 	
-	{!! Form::submit('Save') !!}
+	<div class="row buttons">
+	{!! Form::submit('Submit') !!}
+	</div>
 	
 {!! Form::close() !!}
 

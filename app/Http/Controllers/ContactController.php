@@ -38,6 +38,7 @@ class ContactController extends Controller {
 		        array(
 		            'name' => $request->get('first_name'),
 		            'email' => $request->get('email'),
+		            'email_confirm' => $request->get('email_confirm'),
 		            'user_message' => $request->get('body')
 		        ), function($message)
 		    {

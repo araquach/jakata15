@@ -25,6 +25,7 @@ class ContactFormRequest extends Request {
 			'first_name' => 'required',
 			'second_name' => 'required',
 			'email' => 'required|email',
+			'email_confirm' => 'required|same:email',
 			'mobile' => 'required',
 			'body' => 'required',
 		];
