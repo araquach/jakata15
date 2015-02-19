@@ -2,35 +2,6 @@
 
 use App\Http\Requests\Request;
 
-apprentice_id
-date
-first_name
-second_name
-age
-address1
-address2
-address3
-postcode
-email
-phone
-mobile
-current_position
-in_salon
-salon_name
-qualification_school
-qualification_hair
-cutting
-styling
-colouring
-men
-extensions
-chem_straightening
-brazil_blow
-hair_up
-about
-why_hairdressing
-why_jakata
-
 class ApprenticeFormRequest extends Request {
 
 	/**
