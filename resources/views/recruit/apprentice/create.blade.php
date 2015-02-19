@@ -27,7 +27,9 @@ window.addEvent('domready', function(){
 <p>link</p>
 <p>Please complete ALL sections of the form before submitting your application.</p>
 <p>We will contact you as soon as a position becomes available.</p>
-FORM HERE
+
+@include('recruit.apprentice._form')
+
 </div> <!--application-form-->
 </div> <!--application-->
 
