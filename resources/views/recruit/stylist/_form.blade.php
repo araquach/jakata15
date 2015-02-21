@@ -69,6 +69,8 @@
 		{!! Form::label('mobile', 'Mobile') !!}
 		{!! Form::text('mobile') !!}
 		{!! $errors->first('mobile') !!}	
+	</div>
+	
 	</div> <!--end elements (basic)-->
 	
 	<h2 class="reveal">2. Other Info</h2>

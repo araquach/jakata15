@@ -124,7 +124,7 @@
 
 	<div class="row">
 		{!! Form::label('cutting', 'Cutting') !!}
-		{!! Form::select('') !!}
+		{!! Form::select('cutting') !!}
 		{!! $errors->first('cutting') !!}
 	</div>
 
