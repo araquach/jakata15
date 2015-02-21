@@ -104,60 +104,61 @@
 		{!! $errors->first('experience') !!}
 	</div>	
 	
-		<div class="row">
-			<?php echo $form->labelEx($model,'current_position'); ?>
-			<?php echo $form->dropDownList($model,'current_position', $model->getPositionOptions()); ?>
-			<?php echo $form->error($model,'current_position'); ?>
-		</div>
+	<div class="row">
+		{!! Form::label('current_position', 'Current Position') !!}
+		{!! Form::select('current_position') !!}
+		{!! $errors->first('current_position') !!}
+	</div>	
 	
-		<div class="row">
-			<?php echo $form->labelEx($model,'client_base'); ?>
-			<?php echo $form->dropDownList($model,'client_base', $model->getClientbaseOptions()); ?>
-			<?php echo $form->error($model,'client_base'); ?>
-		</div>
+	<div class="row">
+		{!! Form::label('client_base', 'Client Base') !!}
+		{!! Form::select('client_base') !!}
+		{!! $errors->first('client_base') !!}
+	</div>	
 	
-		<div class="row">
-			<?php echo $form->labelEx($model,'qualifications'); ?>
-			<?php echo $form->dropDownList($model,'qualifications', $model->getQualificationOptions()); ?>
-			<?php echo $form->error($model,'qualifications'); ?>
-		</div>
+	<div class="row">
+		{!! Form::label('qualifications', 'Qualifications') !!}
+		{!! Form::select('qualifications') !!}
+		{!! $errors->first('qualifications') !!}
+	</div>
 	
 	<div id="adex">
 	<p class="application">Please check the box if you have experience in the following areas:</p>
+	
 	<div class="adexBox">
-		<?php echo $form->labelEx($model,'adex_stock'); ?>
-		<?php echo $form->checkBox($model,'adex_stock'); ?>
-		<?php echo $form->error($model,'adex_stock'); ?>
+		{!! Form::label('adex_stock', 'Stock Control') !!}
+		{!! Form::checkbox('adex_stock') !!}
+		{!! $errors->first('adex_stock') !!}
 	</div>
 	
 	<div class="adexBox">
-		<?php echo $form->labelEx($model,'adex_manage'); ?>
-		<?php echo $form->checkBox($model,'adex_manage'); ?>
-		<?php echo $form->error($model,'adex_manage'); ?>
+		{!! Form::label('adex_manage', 'Management') !!}
+		{!! Form::checkbox('adex_manage') !!}
+		{!! $errors->first('adex_manage') !!}
 	</div>
 	
 	<div class="adexBox">
-		<?php echo $form->labelEx($model,'adex_train'); ?>
-		<?php echo $form->checkBox($model,'adex_train'); ?>
-		<?php echo $form->error($model,'adex_train'); ?>
+		{!! Form::label('adex_train', 'Training') !!}
+		{!! Form::checkbox('adex_train') !!}
+		{!! $errors->first('adex_train') !!}
 	</div>
 	
 	<div class="adexBox">
-		<?php echo $form->labelEx($model,'adex_reception'); ?>
-		<?php echo $form->checkBox($model,'adex_reception'); ?>
-		<?php echo $form->error($model,'adex_reception'); ?>
+		{!! Form::label('adex_reception', 'Reception') !!}
+		{!! Form::checkbox('adex_reception') !!}
+		{!! $errors->first('adex_reception') !!}
 	</div>
 	
 	<div class="adexBox">
-		<?php echo $form->labelEx($model,'adex_marketing'); ?>
-		<?php echo $form->checkBox($model,'adex_marketing'); ?>
-		<?php echo $form->error($model,'adex_marketing'); ?>
+		{!! Form::label('adex_marketing', 'Marketing') !!}
+		{!! Form::checkbox('adex_marketing') !!}
+		{!! $errors->first('adex_marketing') !!}
 	</div>
 	
 	<div class="adexBox">
-		<?php echo $form->labelEx($model,'adex_cservice'); ?>
-		<?php echo $form->checkBox($model,'adex_cservice'); ?>
-		<?php echo $form->error($model,'adex_cservice'); ?>
+		{!! Form::label('adex_cservice', 'Customer Service') !!}
+		{!! Form::checkbox('adex_cservice') !!}
+		{!! $errors->first('adex_cservice') !!}
 	</div>
 	</div> <!--end adex-->
 		
