@@ -257,6 +257,4 @@
 	
 </div><!-- end accordion-->
 
-<?php $this->endWidget(); ?>
-
 </div><!-- form -->

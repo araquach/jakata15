@@ -17,7 +17,7 @@ window.addEvent('domready', function(){
 @if(Session::has('message'))
 	<div class="applicationSuccess">
 	{{{ Session::get('message') }}}
-</div>
+	</div>
 @endif
 
 <div id="application-form">
@@ -26,7 +26,8 @@ window.addEvent('domready', function(){
 <p>Please complete ALL sections of the form before submitting your application.</p>
 <p>We will contact you as soon as a position becomes available.</p>
 
-<p>form here</p>
+@include('recruit.stylist._form')
+
 </div> 
 </div> 
 
