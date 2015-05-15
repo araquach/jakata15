@@ -24,7 +24,7 @@ class StylistController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('recruit.stylist.create');
 	}
 
 	/**
