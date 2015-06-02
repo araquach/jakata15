@@ -14,7 +14,7 @@ class StylistController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		return view('recruit.stylist.index');
 	}
 
 	/**

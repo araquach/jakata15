@@ -20,7 +20,7 @@ class ApprenticeController extends Controller {
 	 */
 	public function index()
 	{
-		return 'Apprentice';
+		return view('recruit.apprentice.index');
 	}
 
 	/**
