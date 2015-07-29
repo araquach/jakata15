@@ -87,13 +87,26 @@
 	
 	<div class="row">
 		{!! Form::label('current_position', 'Current Position') !!}
-		{!! Form::select('current_position') !!}
+		{!! Form::select('current_position', [
+			'0' => 'Please Choose',
+			'1' => '1st Year Apprentice',
+			'2' => '2nd Year Apprentice',
+			'3' => 'Level 1 College',
+			'4' => 'Level 2 College',
+			'5' => 'School Link',
+			'6' => 'Other']
+		) !!}
 		{!! $errors->first('current_position') !!}
 	</div>
 
 	<div class="row">
 		{!! Form::label('in_salon', 'In Salon') !!}
-		{!! Form::select('in_salon') !!}
+		{!! Form::select('in_salon', [
+			'0' => 'Please Choose',
+			'1' => 'In Salon',
+			'2' => 'Other Industry',
+			'3' => 'Not Employed']
+		) !!}
 		{!! $errors->first('in_salon') !!}
 	</div>
 
@@ -103,15 +116,16 @@
 		{!! $errors->first('salon_name') !!}
 	</div>
 
-	<div class="row">
-		{!! Form::label('qualification_school', 'School Qualifications') !!}
-		{!! Form::select('qualification_school') !!}
-		{!! $errors->first('qualification_school') !!}
-	</div>
-
+	
 	<div class="row">
 		{!! Form::label('qualification_hair', 'Hairdressing Qualifications') !!}
-		{!! Form::select('qualification_hair') !!}
+		{!! Form::select('qualification_hair', [
+			'0' => 'Please Choose',
+			'1' => 'Working towards NVQ1',
+			'2' => 'Working Towards NVQ2',
+			'3' => 'Working Towards NVQ3',
+			'4' => 'Other']
+		) !!}
 		{!! $errors->first('qualification_hair') !!}
 	</div>
 	
@@ -124,49 +138,49 @@
 
 	<div class="row">
 		{!! Form::label('cutting', 'Cutting') !!}
-		{!! Form::select('cutting') !!}
+		{!! Form::selectRange('cutting', 0, 5) !!}
 		{!! $errors->first('cutting') !!}
 	</div>
-
+	
 	<div class="row">
 		{!! Form::label('styling', 'Styling') !!}
-		{!! Form::select('styling') !!}
+		{!! Form::selectRange('styling', 0, 5) !!}
 		{!! $errors->first('styling') !!}
 	</div>
 
 	<div class="row">
 		{!! Form::label('colouring', 'Colouring') !!}
-		{!! Form::select('colouring') !!}
+		{!! Form::selectRange('colouring', 0, 5) !!}
 		{!! $errors->first('colouring') !!}
 	</div>
 	
 	<div class="row">
 		{!! Form::label('men', 'Men') !!}
-		{!! Form::select('men') !!}
+		{!! Form::selectRange('men', 0, 5) !!}
 		{!! $errors->first('men') !!}
 	</div>
 
 	<div class="row">
 		{!! Form::label('extensions', 'Extensions') !!}
-		{!! Form::select('extensions') !!}
+		{!! Form::selectRange('extensions', 0, 5) !!}
 		{!! $errors->first('extensions') !!}
 	</div>
 
 	<div class="row">
 		{!! Form::label('chem_straightening', 'Chemical Straightening') !!}
-		{!! Form::select('chem_straightening') !!}
+		{!! Form::selectRange('chem_straightening', 0, 5) !!}
 		{!! $errors->first('chem_straightening') !!}
 	</div>
 
 	<div class="row">
 		{!! Form::label('brazil_blow', 'Brazilian Blowdry') !!}
-		{!! Form::select('brazil_blow') !!}
+		{!! Form::selectRange('brazil_blow', 0, 5) !!}
 		{!! $errors->first('brazil_blow') !!}
 	</div>
 
 	<div class="row">
 		{!! Form::label('hair_up', 'Hair Up') !!}
-		{!! Form::select('hair_up') !!}
+		{!! Form::selectRange('hair_up', 0, 5) !!}
 		{!! $errors->first('hair_up') !!}
 	</div>
 	</div> <!--end elements (hairdressing skills)-->
