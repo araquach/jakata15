@@ -7,6 +7,8 @@
 	        <li>{{{ $error }}}</li>
 	    @endforeach
 	</ul>
+	
+{{ Form::open() }}	
 
 <div class="accordion">
 	
@@ -295,5 +297,7 @@
 	</div> <!--end element(hairdressing skills) -->
 	
 </div><!-- end accordion-->
+
+{{ Form::close() }}
 
 </div><!-- form -->
